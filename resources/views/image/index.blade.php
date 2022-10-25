@@ -82,7 +82,9 @@
                     <div class="mb-5 container">
                         <div class="center" style="text-align:center;">
                             <x-jet-nav-link href="{{ route('images.create') }}" >
-                                {{ __('Posts Gallery') }}
+                                <x-jet-button>
+                                    {{ __('Posts Gallery') }}
+                                </x-jet-button>
                             </x-jet-nav-link>
                         </div>
                     </div>

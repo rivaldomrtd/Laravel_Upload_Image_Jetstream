@@ -82,7 +82,9 @@
                     <div class="mb-5 container">
                         <div class="center" style="text-align:center;">
                             <x-jet-nav-link href="{{ route('posts.create') }}" >
-                                {{ __('Posts Artikel') }}
+                                <x-jet-button>
+                                    {{ __('Posts Artikel') }}
+                                </x-jet-button>
                             </x-jet-nav-link>
                         </div>
                     </div>

@@ -19,7 +19,7 @@
                         </div>
                         <div class="col-span-6 sm:col-span-4">
                             <x-jet-label for="description" value="{{__('Description')}}" />
-                            <textarea  type="text" name="description" class="
+                            <textarea  type="text" rows="10" name="description" class="
                             w-full
                             px-4
                             py-2
@@ -30,7 +30,7 @@
                             focus:ring-1
                             focus:ring-blue-600"
                             >{{ $post->description }}</textarea>
-                            <x-jet-input-error for="description" class="mt-2" />
+                            <x-jet-input-error for="description" class="mt-2"  />
                         </div>
                         <div class="flex items-center mt-4">
                             <x-jet-button> Update

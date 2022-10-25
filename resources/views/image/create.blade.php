@@ -26,7 +26,7 @@
                             rounded-md
                             focus:outline-none
                             focus:ring-1
-                            focus:ring-blue-600" name="description" required ></textarea>
+                            focus:ring-blue-600" rows="10" name="description" required ></textarea>
                             <x-jet-input-error for="description" class="mt-2" />
                         </div>
                         <div class="col-span-6 sm:col-span-4">
