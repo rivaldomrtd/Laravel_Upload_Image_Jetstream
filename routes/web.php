@@ -19,6 +19,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', [TampilanController::class, 'index'])->name('tampilan');
+});
 
 //Artikel
 Route::get('user/artikel', [PostController::class, 'index'])->name('artikel');
@@ -29,4 +36,3 @@ Route::get('user/image', [ImageController::class, 'index'])->name('image');
 Route::resource('images', ImageController::class);
 
 //View Page
-Route::get('user/tampilan', [TampilanController::class, 'index'])->name('tampilan');

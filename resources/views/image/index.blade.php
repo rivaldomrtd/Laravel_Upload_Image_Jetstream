@@ -92,6 +92,7 @@
                         <thead class="font-bold bg-gray-300 border-b-2">
                             <td scope="col">@sortablelink("ID")</td>
                             <td scope="col">Title</td>
+                            <td scope="col">Caption</td>
                             <td scope="col">Tanggal</td>
                             <td scope="col">Image</td>
                             <td scope="col">Action</td>
@@ -100,9 +101,10 @@
                             @foreach ($images->sortBy('created_at') as $image)
                             <tr>
                                 <td class="px-4 py-2 " data-label="Title">{{ Str::limit($image->title,20) }}</td>
+                                <td class="px-4 py-2 " data-label="Title">{{ Str::limit($image->description,30) }}</td>
                                 <td class="px-4 py-2" data-label="Created_at">{{ $image->created_at }}</td>
                                 <td class="px-4 py-2" data-label="File" >
-                                    <img src={{$image->file }} width="50"/>
+                                    <img src={{$image->file }} style="width:50px"/>
                                 </td>
                                 <td class="px-4 py-2 font-extrabold">
                                     <form action="{{ route('images.destroy', $image->id)}}" method="post" enctype="multipart/form-data">
